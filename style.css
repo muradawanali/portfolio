@@ -53,6 +53,12 @@ body {
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; margin: 0; padding: 0; }
+.hero__photo {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: calc(var(--radius-lg) - 6px);
+}
 
 .container {
   max-width: var(--container-w);
@@ -64,6 +70,16 @@ ul { list-style: none; margin: 0; padding: 0; }
   outline: 2px solid var(--secondary);
   outline-offset: 3px;
   border-radius: 4px;
+}
+.about__photo-placeholder, .about__photo {
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 10px;
+  color: var(--text-faint);
+  object-fit: cover; /* added, harmless on the placeholder div */
 }
 
 h1, h2, h3 { font-family: var(--font-display); color: var(--text); margin: 0; }
