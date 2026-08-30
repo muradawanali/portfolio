@@ -99,10 +99,11 @@
 
       <div class="hero__visual reveal reveal--delay">
         <!-- Placeholder for a real photo — replace with images/profile.jpg -->
-       <div class="hero__photo-frame">
+      <div class="hero__photo-frame">
   <img src="images/profile.jpg" alt="Murad Ali" class="hero__photo"
-       onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-  <div class="hero__photo-placeholder" style="display:none;">
+       onerror="this.replaceWith(this.nextElementSibling); this.nextElementSibling.style.display='flex';"
+       style="display:none;" onload="this.style.display='block'; this.nextElementSibling.remove();">
+  <div class="hero__photo-placeholder">
     <svg viewBox="0 0 24 24" width="72" height="72"><path fill="currentColor" d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 12c5 0 9 2.5 9 5.5V22H3v-2.5C3 16.5 7 14 12 14Z" opacity=".85"/></svg>
     <p>Add your photo<br><span>images/profile.jpg</span></p>
   </div>
